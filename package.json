@@ -1,0 +1,38 @@
+{
+  "name": "surfing",
+  "version": "1.0.0",
+  "description": "landing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmitrio291/Surfing.git"
+  },
+  "author": "Dikk Dmitry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmitrio291/Surfing/issues"
+  },
+  "homepage": "https://github.com/dmitrio291/Surfing#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-if": "^2.0.2",
+    "gulp-newer": "^1.4.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-tinypng": "^1.0.2",
+    "gulp-uglify": "^3.0.1",
+    "gulp.spritesmith": "^6.9.0",
+    "rimraf": "^2.6.2"
+  }
+}
