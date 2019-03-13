@@ -1,0 +1,9 @@
+- let menu = ['Stories', 'Events', 'Places', 'Boards']
+nav.navigation-wrapper
+  a(href="#!")
+    .logo
+      img(width="16" src="img/logo/logo.svg", alt="logo")
+  ul.navigation
+    each link in menu
+      li.navigation__item 
+        a(class="navigation__link" href="#!")=link

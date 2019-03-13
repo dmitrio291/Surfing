@@ -14,7 +14,7 @@ const gulpIf = require('gulp-if');
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-tinypng');
 const newer = require('gulp-newer');
-const isDevelopment = false;
+const isDevelopment = true;
 
 /* -------- Server -------- */
 gulp.task('server', function() {
