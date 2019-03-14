@@ -1,0 +1,25 @@
+@import "navigation";
+@import "header-slider";
+.site-desc {
+  width: 12px;
+  height: 12px;  
+  position: absolute;
+  top: 58px;
+  right: -50px;
+}
+
+.site-desc__content {
+  color: rgba(11, 12, 17, 0.2);
+  font-family: 'League-Spartan', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 5.4px;
+  transform: rotate(-90deg) translate(-100%, 0);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: left top;
+}
+@import "header-social";
