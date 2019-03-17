@@ -14,7 +14,6 @@ const gulpIf = require('gulp-if');
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-tinypng');
 const newer = require('gulp-newer');
-/* const htmlbeautify = require('gulp-html-beautify'); */
 const isDevelopment = true;
 
 /* -------- Server -------- */
@@ -29,26 +28,9 @@ gulp.task('server', function () {
   gulp.watch('dist/**/*').on('change', browserSync.reload);
 });
 
-/* -------- Html beautify -------- */
-/* gulp.task('htmlbeautify', function beautifyHTML() {
-  let options = {
-    indentSize: 2,
-    unformatted: [
-      'abbr', 'area', 'b', 'bdi', 'bdo', 'br', 'cite',
-      'code', 'data', 'datalist', 'del', 'dfn', 'em', 'embed', 'i', 'ins', 'kbd', 'keygen', 'map', 'mark', 'math', 'meter', 'noscript',
-      'object', 'output', 'progress', 'q', 'ruby', 's', 'samp', 'small',
-      'strong', 'sub', 'sup', 'template', 'time', 'u', 'var', 'wbr', 'text',
-      'acronym', 'address', 'big', 'dt', 'ins', 'strike', 'tt'
-    ]
-  };
-  return gulp.src('dist/*.html')
-    .pipe(htmlbeautify(options))
-    .pipe(gulp.dest('dist'));
-}); */
-
 /* -------- Pug compile -------- */
 gulp.task('templates:compile', function buildHTML() {
-  return gulp.src('app/pug/index.pug')
+  return gulp.src('app/pug/*.pug')
     .pipe(pug({
       pretty: true
     }))
