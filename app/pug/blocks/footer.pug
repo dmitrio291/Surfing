@@ -1,0 +1,14 @@
+section.footer
+  .container.flex-column-center
+    .footer-logo-wrapper
+      a(href="#!")
+        img(width="16" src="img/logo/logo.svg", alt="logo")
+    .footer-nav-wrapper
+      ul.navigation
+        each link in menu
+          li.navigation__item
+            a(class="navigation__link" href="#!")=link
+      .social
+        each icon, index in socials  
+          a(href="#" class="social__item")
+            img(src=icon alt=socialName[index])

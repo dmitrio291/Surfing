@@ -3,20 +3,16 @@ section.shop
     h2.title
       span.subtitle Shop
       span Surfboards
-    .shop-slider
-      - let categoryBoards = ['Funboards', 'Surfboards', 'Funboards']
-      - let titleBoards = ['Chilli Rare Bird', 'Emery NEM XF', 'Agency GROM']
-      - let priceBoards = ['$890', '$950', '$670']
-      - let imgBoards = ['img/boards/board-1.png', 'img/boards/board-2.png', 'img/boards/board-3.png']
-      each board, index in categoryBoards
-        .board
-          .board__img-holder
-            img(class="board__img", src=imgBoards[index], alt="Surfing board")
-          .board-desc
-            .board__cat=board
-            .board__title=titleBoards[index]
-            .board-buy
-              .board-buy__price=priceBoards[index]
-              .board-buy__link Buy
+  .container.shop-slider-wrapper
+    .shop-slider-special-holder
+      div(id="shopSlider", class="owl-carousel")
+        include shop-slider-items
+  .container
+    .shop-slider-controls
+      div(id="shopSliderLeft", class="shop-slider-arrow shop-slider-arrow--left")
+        img(src="img/controls/boards-left.svg", alt="Prev")
+      div(id="shopSliderRight", class="shop-slider-arrow shop-slider-arrow--right")
+        img(src="img/controls/boards-right.svg", alt="Next")
+  .container
     .shop-link-wrapper
       a(href="#", class="read-more-link") Show All

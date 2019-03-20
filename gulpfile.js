@@ -4,7 +4,8 @@ const sass = require('gulp-sass');
 const spritesmith = require('gulp.spritesmith');
 const rimraf = require('rimraf');
 const rename = require('gulp-rename');
-const uglify = require('gulp-uglify');
+// const uglify = require('gulp-uglify');
+const uglify = require('gulp-uglify-es').default;
 const concat = require('gulp-concat');
 const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
@@ -14,7 +15,7 @@ const gulpIf = require('gulp-if');
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-tinypng');
 const newer = require('gulp-newer');
-const isDevelopment = true;
+const isDevelopment = false;
 
 /* -------- Server -------- */
 gulp.task('server', function () {
@@ -46,7 +47,7 @@ gulp.task('styles:compile', function () {
       browsers: ['> 0.1%', '> 1%', 'ie 8', 'ie 7'],
       cascade: false
     }))
-    /* .pipe(media()) */
+    .pipe(media())
     .pipe(cleanCSS({
       compatibility: 'ie8',
       level: 2
@@ -59,6 +60,8 @@ gulp.task('styles:compile', function () {
 /* -------- Js -------- */
 gulp.task('js', function () {
   return gulp.src([
+      'app/libs/jquery/jquery-3.3.1.min.js',
+      'app/libs/owlcarousel2/owl.carousel.min.js',
       'app/js/main.js'
     ])
     .pipe(gulpIf(isDevelopment, sourcemaps.init()))

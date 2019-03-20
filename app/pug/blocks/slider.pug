@@ -1,0 +1,17 @@
+.slide-wrapper
+  <!-- slides -->
+  div(id="headerSlider", class="owl-carousel")
+    include header-slider-items
+  .container.relative
+    <!-- slides controls -->
+    .slide-controls
+      a(id="headerSliderLeft", class="slide-controls__left", href="#")
+        img(src="img/controls/header-slider-left.svg", alt="Left")
+      .slide-controls-number
+        span.slide-controls-number__active -
+        span.slide-controls-number__from /
+        span.slide-controls-number__total -
+      a(id="headerSliderRight", class="slide-controls__right", href="#")  
+        img(src="img/controls/header-slider-right.svg", alt="Right")
+    include social
+  

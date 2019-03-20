@@ -1,0 +1,14 @@
+- let categoryBoards = ['Funboards', 'Surfboards', 'Funboards']
+- let titleBoards = ['Chilli Rare Bird', 'Emery NEM XF', 'Agency GROM']
+- let priceBoards = ['$890', '$950', '$670']
+- let imgBoards = ['img/boards/board-1.png', 'img/boards/board-2.png', 'img/boards/board-3.png']
+  each board, index in categoryBoards
+    .board
+      .board__img-holder
+        img(class="board__img", src=imgBoards[index], alt="Surfing board")
+      .board-desc
+        .board__cat=board
+        .board__title=titleBoards[index]
+        .board-buy
+          .board-buy__price=priceBoards[index]
+          .board-buy__link Buy

@@ -1,5 +1,7 @@
-@import "blocks/reboot.scss";
+@import "../libs/bootstrap-reboot/reboot";
 @import "fonts/league-spartan";
+@import "../libs/owlcarousel2/assets/owl.carousel.min";
+@import "../libs/owlcarousel2/assets/owl.theme.default.min";
 @import "blocks/base";
 @import "blocks/header";
 @import "blocks/quote";
@@ -8,3 +10,4 @@
 @import "blocks/article";
 @import "blocks/subscribe";
 @import "blocks/camp";
+@import "blocks/footer";

@@ -80,6 +80,16 @@
   right: -30px;
   top: 0;
 
+  .article--even & {
+    @media (max-width: 1400px) {
+      right: 30px;
+      top: 30px;
+      .article__preview-desc-content {
+        color: #ffffff;
+      }
+    }
+  }
+
   .article--odd & {
     left: -30px;
     right: auto;
