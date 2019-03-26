@@ -86,7 +86,7 @@ gulp.task('sprite', function (cb) {
 
 /* -------- Imagemin -------- */
 gulp.task('tinypng', function () {
-  gulp.src('app/img/**/*')
+  return gulp.src(['app/img/*/*.jpg', 'app/img/*/*.png'])
     .pipe(newer('dist/img'))
     .pipe(imagemin('s3bVFyRMjDmrVy0b2RldwryMD2GB7vhw'))
     .pipe(gulp.dest('dist/img'));

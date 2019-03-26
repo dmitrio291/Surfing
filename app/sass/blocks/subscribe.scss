@@ -1,5 +1,6 @@
 .subscribe-wrapper {
   position: relative;
+
   &:before {
     content: '';
     position: absolute;
@@ -18,14 +19,23 @@
 }
 
 .subscribe {
-  width: 590px;
+  max-width: 590px;
   margin-top: 50px;
-  padding-top: 160px;
-  padding-bottom: 75px;
+  padding-top: (160px/2);
+  padding-bottom: (75px/2);
   position: relative;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media (min-width: 1254px) {
+    padding-top: 160px;
+    padding-bottom: 75px;
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   &:before {
     content: '';
@@ -35,8 +45,12 @@
     transform: translateX(-50%);
     display: block;
     width: 2px;
-    height: 100px;
+    height: (100px/2);
     background-color: #5da8ef;
+
+    @media (min-width: 1254px) {
+      height: 100px;
+    }
   }
 }
 
@@ -70,6 +84,7 @@
 
 .subscribe__form-submit {
   width: 50px;
+  flex: 0 0 50px;
   height: 50px;
   background-color: #5da8ef;
   background-image: url('../img/controls/subscribe-arrow.svg');
